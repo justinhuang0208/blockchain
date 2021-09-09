@@ -41,7 +41,6 @@ class Chain():
                     print("the connection was broken")
                     return False
             return True
-
 JustinChain = Chain()
 
 block1 = Block("transfer ten dollars", "")
@@ -51,7 +50,6 @@ JustinChain.add_block_to_chain(block2)
 
 JustinChain.chain[1].data = "transfer two hundred dollars"
 JustinChain.chain[1].hash = JustinChain.chain[1].compute_hash()
-
 if(JustinChain.validate_chain()):
     print("validated chain")
 else:
